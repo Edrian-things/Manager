@@ -29,42 +29,29 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
             panel2 = new Panel();
             button2 = new Button();
             button4 = new Button();
-            btnAddItems = new Button();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dataGridView2 = new DataGridView();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 50F);
-            label1.Location = new Point(279, 9);
+            label1.Location = new Point(326, 9);
             label1.Name = "label1";
             label1.Size = new Size(396, 89);
             label1.TabIndex = 7;
             label1.Text = "View Orders";
-            label1.Click += label1_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(230, 104);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(558, 334);
-            dataGridView1.TabIndex = 8;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(btnAddItems);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
@@ -95,39 +82,27 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
-            // btnAddItems
+            // dataGridView2
             // 
-            btnAddItems.FlatStyle = FlatStyle.Flat;
-            btnAddItems.Location = new Point(22, 254);
-            btnAddItems.Name = "btnAddItems";
-            btnAddItems.Size = new Size(165, 27);
-            btnAddItems.TabIndex = 2;
-            btnAddItems.Text = "Add Items";
-            btnAddItems.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(22, 205);
-            button3.Name = "button3";
-            button3.Size = new Size(165, 33);
-            button3.TabIndex = 3;
-            button3.Text = "View Inventory";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(206, 101);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(582, 337);
+            dataGridView2.TabIndex = 10;
             // 
             // ViewOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView2);
             Controls.Add(panel2);
-            Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "ViewOrders";
             Text = "ViewOrders";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ViewOrders_Load;
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,6 +114,7 @@
         private Button btnAddItems;
         private Button button2;
         private Button button4;
-        private Button button3;
+        private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn Column1;
     }
 }

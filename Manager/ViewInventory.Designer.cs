@@ -31,7 +31,6 @@
             panel2 = new Panel();
             button2 = new Button();
             button4 = new Button();
-            btnAddItems = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
@@ -43,7 +42,6 @@
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button4);
-            panel2.Controls.Add(btnAddItems);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
@@ -74,21 +72,11 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
-            // btnAddItems
-            // 
-            btnAddItems.FlatStyle = FlatStyle.Flat;
-            btnAddItems.Location = new Point(22, 253);
-            btnAddItems.Name = "btnAddItems";
-            btnAddItems.Size = new Size(165, 27);
-            btnAddItems.TabIndex = 2;
-            btnAddItems.Text = "Add Items";
-            btnAddItems.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 50F);
-            label1.Location = new Point(344, 9);
+            label1.Location = new Point(357, 0);
             label1.Name = "label1";
             label1.Size = new Size(316, 89);
             label1.TabIndex = 8;
@@ -112,6 +100,7 @@
             Controls.Add(panel2);
             Name = "ViewInventory";
             Text = "ViewInventory";
+            Load += ViewInventory_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

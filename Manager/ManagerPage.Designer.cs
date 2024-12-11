@@ -33,7 +33,6 @@
             panel1 = new Panel();
             panel2 = new Panel();
             button3 = new Button();
-            btnAddItems = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -76,7 +75,6 @@
             // 
             panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(button3);
-            panel2.Controls.Add(btnAddItems);
             panel2.Controls.Add(button1);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
@@ -94,16 +92,6 @@
             button3.Text = "View Inventory";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
-            // 
-            // btnAddItems
-            // 
-            btnAddItems.FlatStyle = FlatStyle.Flat;
-            btnAddItems.Location = new Point(25, 251);
-            btnAddItems.Name = "btnAddItems";
-            btnAddItems.Size = new Size(165, 27);
-            btnAddItems.TabIndex = 2;
-            btnAddItems.Text = "Add Items";
-            btnAddItems.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
